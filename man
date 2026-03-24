@@ -1,0 +1,30 @@
+def para_binario(n):
+    return bin(n)[2:]  # remove o "0b"
+
+
+def soma_nim(a, b, c):
+    return a ^ b ^ c  # XOR
+
+
+# Entrada de dados
+n1 = int(input("Digite o primeiro número (menor que 16): "))
+n2 = int(input("Digite o segundo número (menor que 16): "))
+n3 = int(input("Digite o terceiro número (menor que 16): "))
+
+# Conversão para binário
+b1 = para_binario(n1)
+b2 = para_binario(n2)
+b3 = para_binario(n3)
+
+# Soma-Nim
+resultado = soma_nim(n1, n2, n3)
+b_resultado = para_binario(resultado)
+
+# Saída
+print("Binários:")
+print(n1, "->", b1)
+print(n2, "->", b2)
+print(n3, "->", b3)
+
+print("Soma-Nim:")
+print(resultado, "->", b_resultado)
